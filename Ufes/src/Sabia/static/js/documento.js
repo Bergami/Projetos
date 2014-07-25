@@ -2,7 +2,7 @@ $(function(){
 	var editor, html = '';		
 
 	var ConfigCalendar = {
-
+		
 		defineIdioma : function(){
 			$('.date').datepicker({                                  
             	language: 'pt-BR',
@@ -81,6 +81,12 @@ $(function(){
 
 		atribuirClassificacao:function(){
 			$('#classificacao').val($('.star-colorize').length);								
+		},
+
+		rolarScrollPagina:function(){
+
+   		 	var target_offset = $("#salvar").offset().top;    	    	
+    		$('html, body').animate({ scrollTop: target_offset }, 1400);   
 		}
 	};
 
@@ -106,6 +112,7 @@ $(function(){
 
 			$('.criar-resumo').click(function(){				
 				FkEditor.createEditor();				
+				Documento.rolarScrollPagina();
 			});		
 		}
 		

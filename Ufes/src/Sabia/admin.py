@@ -5,4 +5,4 @@ from Sabia.models import Projeto, Grupo, Usuario
 
 admin.site.register(Projeto)
 admin.site.register(Grupo)
-admin.site.register(Usuario)
+#admin.site.register(Usuario)

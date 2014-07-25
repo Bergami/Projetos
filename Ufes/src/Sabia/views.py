@@ -50,7 +50,8 @@ def salvar_usuario(request):
         usu.grupo_id = request.POST['grupo_id']
         usu.save()
 
-        return render_to_response('CadastroUsuario.html')
+        grupo = Grupo.objects.all()
+        return render_to_response("CadastroUsuario.html", {'grupo': grupo}, context_instance=RequestContext(request))        
         
 
 
